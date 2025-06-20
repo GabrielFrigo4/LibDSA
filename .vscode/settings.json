@@ -1,0 +1,12 @@
+{
+	"files.associations": {
+		"*.shader": "hlsl",
+		"*.arm": "arm",
+		"*.asm": "nasm",
+		"*.wlua": "lua",
+		"stdio.h": "c",
+		"stdlib.h": "c",
+		"stddef.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
+}
