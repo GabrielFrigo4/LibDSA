@@ -17,7 +17,7 @@ size_t partition(int *ptr, size_t count)
 	return ini - 1;
 }
 
-void quick_sort(int *ptr, size_t count)
+void quick_sort1(int *ptr, size_t count)
 {
 	if (count <= 1)
 	{
@@ -26,4 +26,23 @@ void quick_sort(int *ptr, size_t count)
 	size_t p = partition(ptr, count);
 	quick_sort(ptr, p);
 	quick_sort(ptr + p, count - p);
+}
+
+void quick_sort2(int *ptr, size_t count)
+{
+	while (count > 1)
+	{
+		size_t p = partition(ptr, count);
+		if (p < (count - p - 1))
+		{
+			quick_sort(ptr, p);
+			ptr += p + 1;
+			count -= p + 1;
+		}
+		else
+		{
+			quick_sort(ptr + p + 1, count - p - 1);
+			count = p;
+		}
+	}
 }

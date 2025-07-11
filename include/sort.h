@@ -14,4 +14,5 @@ DLL_EXPORT void merge(int *ptr, size_t lcount, size_t rcount);
 DLL_EXPORT void merge_sort(int *ptr, size_t count);
 
 DLL_EXPORT size_t partition(int *ptr, size_t count);
-DLL_EXPORT void quick_sort(int *ptr, size_t count);
+DLL_EXPORT void quick_sort1(int *ptr, size_t count);
+DLL_EXPORT void quick_sort2(int *ptr, size_t count);
